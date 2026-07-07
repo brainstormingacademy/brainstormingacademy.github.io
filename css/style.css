@@ -1,0 +1,413 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#ffffff;
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 7%;
+
+    background:white;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+.logo img{
+    width:90px;
+    height:auto;
+}
+
+.logo h2{
+
+    color:#154c9f;
+
+    font-size:28px;
+}
+
+.logo p{
+
+    color:#666;
+
+    font-size:14px;
+}
+
+.menu{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:35px;
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.menu a:hover{
+
+    color:#154c9f;
+}
+/* HERO SECTION */
+
+.hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:80px 8%;
+
+    min-height:85vh;
+
+    background:linear-gradient(to right,#ffffff,#eef5ff);
+}
+
+.hero-text{
+
+    width:55%;
+}
+
+.hero-text h1{
+
+    font-size:55px;
+
+    color:#154c9f;
+
+    margin-bottom:20px;
+}
+
+.hero-text p{
+
+    font-size:20px;
+
+    color:#555;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+}
+
+.btn{
+
+    display:inline-block;
+
+    background:#f97316;
+
+    color:white;
+
+    padding:15px 35px;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    margin-right:20px;
+
+    transition:.3s;
+}
+
+.btn:hover{
+
+    background:#ea580c;
+}
+
+.btn-secondary{
+
+    display:inline-block;
+
+    border:2px solid #154c9f;
+
+    color:#154c9f;
+
+    padding:15px 35px;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    transition:.3s;
+}
+
+.btn-secondary:hover{
+
+    background:#154c9f;
+
+    color:white;
+}
+
+.hero-image img{
+
+    width:320px;
+    animation: float 4s ease-in-out infinite;
+}
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+/* ==========================
+   WHY CHOOSE BRAINSTORMING
+========================== */
+
+.features{
+    padding:80px 8%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.features h2{
+    font-size:42px;
+    color:#154c9f;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    color:#666;
+    font-size:18px;
+    margin-bottom:50px;
+}
+
+.feature-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.feature-card{
+    background:white;
+    padding:35px 25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.icon{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.feature-card h3{
+    color:#154c9f;
+    margin-bottom:15px;
+}
+
+.feature-card p{
+    color:#555;
+    line-height:1.7;
+}
+/* ==========================
+   HOW IT WORKS
+========================== */
+
+.how-it-works{
+
+    padding:90px 8%;
+
+    background:#f8fbff;
+
+    text-align:center;
+
+}
+
+.how-it-works h2{
+
+    font-size:42px;
+
+    color:#154c9f;
+
+    margin-bottom:15px;
+
+}
+
+.steps{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin:60px 0;
+
+}
+
+.step{
+
+    width:220px;
+
+}
+
+.circle{
+
+    width:80px;
+
+    height:80px;
+
+    background:#154c9f;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+.step h3{
+
+    margin-bottom:12px;
+
+    color:#154c9f;
+
+}
+
+.step p{
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+.arrow{
+
+    font-size:40px;
+
+    color:#f97316;
+
+}
+
+.register-btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:18px 45px;
+
+    background:#f97316;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.register-btn:hover{
+
+    background:#ea580c;
+
+}
+/* SUBJECTS */
+
+.subjects{
+    padding:80px 8%;
+    text-align:center;
+    background:white;
+}
+
+.subjects h2{
+    font-size:42px;
+    color:#154c9f;
+    margin-bottom:10px;
+}
+
+.subjects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:50px;
+}
+
+.subject-card{
+    background:#f8fbff;
+    padding:30px;
+    border-radius:15px;
+    font-size:20px;
+    font-weight:600;
+    color:#154c9f;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.subject-card:hover{
+    transform:translateY(-8px);
+    background:#154c9f;
+    color:white;
+}
