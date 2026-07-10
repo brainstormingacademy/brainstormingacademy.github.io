@@ -26,3 +26,53 @@ topBtn.addEventListener("click", function () {
     });
 
 });
+// Hero Image Slideshow
+
+const slides = document.querySelectorAll(".hero-image .slide");
+const dots = document.querySelectorAll(".hero-dots .dot");
+
+let currentSlide = 0;
+let slideInterval;
+
+// Show a specific slide
+function showSlide(index) {
+
+    slides[currentSlide].classList.remove("active");
+    dots[currentSlide].classList.remove("active");
+
+    currentSlide = index;
+
+    slides[currentSlide].classList.add("active");
+    dots[currentSlide].classList.add("active");
+}
+
+// Show the next slide
+function showNextSlide() {
+
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+
+}
+
+// Restart the automatic slideshow
+function startSlideshow() {
+
+    clearInterval(slideInterval);
+    slideInterval = setInterval(showNextSlide, 4000);
+
+}
+
+// Make dots clickable
+dots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        showSlide(index);
+        startSlideshow(); // Restart timer after clicking
+
+    });
+
+});
+
+// Start automatic slideshow
+startSlideshow();
