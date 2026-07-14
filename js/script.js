@@ -31,48 +31,52 @@ topBtn.addEventListener("click", function () {
 const slides = document.querySelectorAll(".hero-image .slide");
 const dots = document.querySelectorAll(".hero-dots .dot");
 
-let currentSlide = 0;
-let slideInterval;
+if (slides.length > 0 && dots.length > 0) {
 
-// Show a specific slide
-function showSlide(index) {
+    let currentSlide = 0;
+    let slideInterval;
 
-    slides[currentSlide].classList.remove("active");
-    dots[currentSlide].classList.remove("active");
+    // Show a specific slide
+    function showSlide(index) {
 
-    currentSlide = index;
+        slides[currentSlide].classList.remove("active");
+        dots[currentSlide].classList.remove("active");
 
-    slides[currentSlide].classList.add("active");
-    dots[currentSlide].classList.add("active");
-}
+        currentSlide = index;
 
-// Show the next slide
-function showNextSlide() {
+        slides[currentSlide].classList.add("active");
+        dots[currentSlide].classList.add("active");
+    }
 
-    let next = (currentSlide + 1) % slides.length;
-    showSlide(next);
+    // Show the next slide
+    function showNextSlide() {
 
-}
+        let next = (currentSlide + 1) % slides.length;
+        showSlide(next);
 
-// Restart the automatic slideshow
-function startSlideshow() {
+    }
 
-    clearInterval(slideInterval);
-    slideInterval = setInterval(showNextSlide, 4000);
+    // Restart the automatic slideshow
+    function startSlideshow() {
 
-}
+        clearInterval(slideInterval);
+        slideInterval = setInterval(showNextSlide, 4000);
 
-// Make dots clickable
-dots.forEach((dot, index) => {
+    }
 
-    dot.addEventListener("click", () => {
+    // Make dots clickable
+    dots.forEach((dot, index) => {
 
-        showSlide(index);
-        startSlideshow(); // Restart timer after clicking
+        dot.addEventListener("click", () => {
+
+            showSlide(index);
+            startSlideshow();
+
+        });
 
     });
 
-});
+    // Start automatic slideshow
+    startSlideshow();
 
-// Start automatic slideshow
-startSlideshow();
+}

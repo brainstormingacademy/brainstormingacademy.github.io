@@ -744,6 +744,8 @@ html,body{
 
 .contact-card{
     background:white;
+    word-break: break-word;
+    overflow-wrap: anywhere;
     padding:30px;
     border-radius:15px;
     text-align:center;
